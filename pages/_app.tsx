@@ -1,18 +1,17 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app';
-import { withNextRuntime } from 'next-runtime/app';
 import { useState } from 'react';
+import Layout from '../components/layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [globLinks, setGlobLinks] = useState([""])
-  const [globPaths, setGlobPaths] = useState([""])
-  function handleLinks(links: string[]){
-    setGlobLinks(links)
+  const [page, setPage] = useState("Home")
+  function handlePage(page: string){
+    setPage(page)
   }
-  function handlePaths(paths: string[]){
-    setGlobPaths(paths)
-  }
-  return <Component {...pageProps} globLinks={globLinks} handleLinks={handleLinks} globPaths={globPaths} handlePaths={handlePaths}/>
+  return (<Layout page={page}>
+    <Component {...pageProps} handlePage={handlePage}/>
+  </Layout>
+  )
 }
 
 export default MyApp;
