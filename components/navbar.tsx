@@ -12,8 +12,8 @@ export default function NavBar({ page }: any){
         <Image src={logo} alt="logo" className="h-12 w-auto hidden md:flex"/>
         <div className="hidden md:flex justify-between text-lg text-center w-1/2 font-normal">
             {menu.map(( item => (
-              <Link passHref={true} href={"/" + item}>
-                  <div key={item} className={`${route === item ? "bg-green-600 text-gray-900 px-2 py-1": "text-gray-900"} capitalize hover:px-2 py-1 rounded hover:text-white hover:bg-green-300 hover:font-medium`}>{item === "" ? "Home" : item}</div>
+              <Link passHref={true} key={item} href={"/" + item}>
+                  <div className={`${route === item ? "bg-green-600 text-gray-900 px-2 py-1": "text-gray-900"} capitalize hover:px-2 py-1 rounded hover:text-white hover:bg-green-300 hover:font-medium`}>{item === "" ? "Home" : item}</div>
               </Link>
             )))}
         </div>

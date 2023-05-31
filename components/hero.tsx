@@ -12,7 +12,7 @@ export default function Hero(){
         <div className="col-span-3 mr-12 pt-12 md:p-6 flex flex-col gap-8 z-10">
             <p>
                 <span className="text-4xl text-white"> We are SMAQUI, we are dedicated to your </span>
-                <span className="text-4xl text-yellow-400">Marketing</span>
+                <span className="text-4xl text-yellow-400">Growth</span>
             </p>
             <div className="text-xl font-light text-gray-300">Your Best Solution is to work with us</div>
         </div>
