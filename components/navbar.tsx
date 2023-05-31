@@ -9,7 +9,7 @@ export default function NavBar({ page }: any){
     const route = router.pathname.slice(1)
 
     return (<div className="mb-0 md:px-10  md:py-2 flex flex-row items-center justify-between fixed md:sticky z-50 order-last md:order-first bottom-0 md:top-0 w-full bg-white shadow-inner shadow-white">
-        <Image src={logo} alt="logo" className="h-12 w-auto hidden md:flex"/>
+        <Image src={logo} alt="logo" className="h-48 w-auto hidden md:flex"/>
         <div className="hidden md:flex justify-between text-lg text-center w-1/2 font-normal">
             {menu.map(( item => (
               <Link passHref={true} key={item} href={"/" + item}>
