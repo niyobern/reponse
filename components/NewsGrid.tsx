@@ -1,5 +1,6 @@
 import Image from "next/image"
 import image from "../public/images/extension.png"
+import Link from "next/link"
 
 export default function NewsGrid(){
     return (
@@ -8,13 +9,14 @@ export default function NewsGrid(){
                 <div className="text-2xl font-semibold mb-4 text-gray-900">Conservation Agriculture</div>
                 <Image src={image} alt="image" width={500} height={500} className="w-full max-h-[40vh] rounded"/>
                 <p className="my-4 text-gray-700 w-full leading-normal text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eu sem integer vitae justo eget magna. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. In fermentum et sollicitudin ac orci. Nunc consequat interdum varius sit amet mattis. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Ac turpis egestas integer eget aliquet nibh. Tortor id aliquet lectus proin nibh nisl condimentum. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat.</p>
-                <div className="text-white font-medium py-2 px-6 bg-green-600 rounded">Read more</div>
+                <Link href="/extensions/1" passHref className="hover:shadow hover:shadow-green-600"><div className="text-center text-white hover:text-green-500 hover:bg-white hover:font-medium bg-green-700 py-2 px-8 rounded">Read more</div></Link>
+
             </div>
             <div className="flex flex-col items-start w-full shadow-lg pb-4 px-2">
                 <div className="text-2xl font-semibold mb-4 text-gray-900">Conservation Agriculture</div>
                 <Image src={image} alt="image" width={500} height={500} className="w-full md:max-h-[40vh] rounded"/>
                 <p className="my-4 text-gray-700 w-full leading-normal text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eu sem integer vitae justo eget magna. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. In fermentum et sollicitudin ac orci. Nunc consequat interdum varius sit amet mattis. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Ac turpis egestas integer eget aliquet nibh. Tortor id aliquet lectus proin nibh nisl condimentum. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat.</p>
-                <div className="text-white font-medium py-2 px-6 bg-green-600 rounded">Read more</div>
+                <Link href="/extensions/1" passHref className="hover:shadow hover:shadow-green-600"><div className="text-center text-white hover:text-green-500 hover:bg-white hover:font-medium bg-green-700 py-2 px-8 rounded">Read more</div></Link>
             </div>
         </div>
     )

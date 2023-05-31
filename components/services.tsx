@@ -1,5 +1,6 @@
 import Image from "next/image"
 import growth from "../public/images/growth.png"
+import Link from "next/link"
 
 export default function Services({ page }: any){
 
@@ -8,19 +9,19 @@ export default function Services({ page }: any){
             <Image alt="Growth Image" src={growth} height={500} width={500} className="w-1/2 self-center"/>
             <span className="text-2xl font-medium self-center text-gray-800">Marketing and sales</span>
             <p className="text-xl text-gray-800 p-8 self-center text-center">Find Buyers, sell and advertise farm produce and promote farm brand integrity</p>
-            <div className="text-center text-white hover:text-green-500 hover:bg-white hover:font-medium self-center bg-green-700 py-2 px-8 rounded">Read more</div>
+            <Link href="/about" passHref className="self-center hover:shadow hover:shadow-green-600"><div className="active:bg-red-500 text-center text-white hover:text-green-500 hover:bg-white hover:font-medium bg-green-700 py-2 px-8 rounded">Read more</div></Link>
         </div>
         <div className="bg-cyan-300 w-full flex flex-col pb-8 md:py-auto">
             <Image alt="Growth Image" src={growth} height={500} width={500} className="w-1/2 self-center"/>
             <span className="text-2xl font-medium self-center text-gray-800">Marketing and sales</span>
             <p className="text-xl text-gray-800 p-8 self-center text-center">Find Buyers, sell and advertise farm produce and promote farm brand integrity</p>
-            <div className="text-center text-white hover:text-green-500 hover:bg-white hover:font-medium self-center bg-green-700 py-2 px-8 rounded">Read more</div>
+            <Link href="/about" passHref className="self-center hover:shadow hover:shadow-green-600"><div className="active:bg-red-500 text-center text-white hover:text-green-500 hover:bg-white hover:font-medium bg-green-700 py-2 px-8 rounded">Read more</div></Link>
         </div>
         <div className="bg-green-300 w-full flex flex-col pb-8 md:py-auto">
             <Image alt="Growth Image" src={growth} height={500} width={500} className="w-1/2 self-center"/>
             <span className="text-2xl font-medium self-center text-gray-800">Marketing and sales</span>
             <p className="text-xl text-gray-800 p-8 self-center text-center">Find Buyers, sell and advertise farm produce and promote farm brand integrity</p>
-            <div className="text-center text-white hover:text-green-500 hover:bg-white hover:font-medium self-center bg-green-700 py-2 px-8 rounded">Read more</div>
+            <Link href="/about" passHref className="self-center hover:shadow hover:shadow-green-600"><div className="active:bg-red-500 text-center text-white hover:text-green-500 hover:bg-white hover:font-medium bg-green-700 py-2 px-8 rounded">Read more</div></Link>
         </div>
     </div>
     )

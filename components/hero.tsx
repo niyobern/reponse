@@ -1,5 +1,6 @@
 import Image from "next/image"
 import background from "../public/images/extension.png"
+import Link from "next/link"
 
 export default function Hero(){
     return (<div className="h-screen md:h-[80vh] flex flex-col md:grid grid-cols-5 p-12 gap-2 overflow-hidden relative items-center">
@@ -22,8 +23,8 @@ export default function Hero(){
                 <span className="text-4xl text-yellow-400">Service</span>
                 <span className="text-4xl text-white"> is our purpose!</span>
             </p>
-            <div className="bg-white p-2 rounded mt-6">Learn more about us</div>
-            <div className="bg-green-300 p-2 rounded mt-6">Visit our store</div>
+            <Link href="/about" passHref><div className="bg-white p-2 rounded mt-6 hover:bg-green-600 hover:text-white active:bg-red-500 active:text-white">Learn more about us</div></Link>
+            <Link href="/market" passHref><div className="bg-green-300 p-2 rounded mt-6 hover:bg-green-600 hover:text-white active:bg-red-500 active:text-white hover:shadow hover:shadow-green-600">Visit our store</div></Link>
         </div>
     </div>
     )
