@@ -6,7 +6,7 @@ export default function Comments(){
         <div className="flex flex-col">
             <div className="flex flex-col items-center pt-10">
                 <p className="leading-none text-lg text-fuchsia-500 uppercase font-medium">Do not just take our word for it</p>
-                <h1 className="leading-tight text-3xl antialiased font-semibold  pb-2 border-b border-gray-300">See what others are saying</h1>
+                <h1 className="leading-tight text-3xl antialiased font-semibold  pb-2 border-b border-gray-300 text-center">See what others are saying</h1>
             </div>
             <div className="flex flex-col md:grid grid-cols-2 gap-10 md:gap-12 md:mx-32 md:px-20 my-10">
                 <div className="flex flex-col px-6 md:px-10 border-x border-gray-300">

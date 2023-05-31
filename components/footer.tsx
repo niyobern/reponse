@@ -42,7 +42,7 @@ export default function Footer(){
                 </div>
             </div>
         </div>
-        <div className="flex flex-col text-lg mt-6 p-4">
+        <div className="flex flex-col text-lg mb-11 md:mb-0 mt-6 p-4">
             <p>© SMAQUI 2023</p>
         </div>
     </div>
