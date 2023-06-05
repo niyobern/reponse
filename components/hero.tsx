@@ -3,12 +3,12 @@ import background from "../public/images/extension.png"
 import Link from "next/link"
 
 export default function Hero(){
-    return (<div className="h-screen md:h-[80vh] flex flex-col md:grid grid-cols-5 p-12 gap-2 overflow-hidden relative items-center">
+    return (<div className="h-screen md:h-[90vh] bg-black flex flex-col md:grid grid-cols-5 p-12 gap-2 overflow-hidden relative items-center">
         <Image
          src={background}
          alt="background Image"
          fill={true}
-         className="object-fill z-0 filter blur brightness-50"
+         className="object-fill z-0 blur-sm brightness-50"
         />
         <div className="col-span-3 mr-12 pt-12 md:p-6 flex flex-col gap-8 z-10">
             <p>
