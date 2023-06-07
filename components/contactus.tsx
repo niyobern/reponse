@@ -13,7 +13,7 @@ export default function Contactus(){
                 <div className="row-start-3 col-span-full row-span-4 md:p-2 bg-gray-100 md:mx-24 z-20 flex flex-col md:grid grid-cols-5 grid-rows-2 gap-y-4 gap-x-8">
                     <div className="grid grid-cols-5 grid-rows-3 bg-white shadow col-start-1 col-span-2 row-start-1 py-10 gap-x-4 md:pl-12">
                         <div className="col-start-1 row-start-1 row-span-2 self-center pr-0 w-24">
-                            <svg className="w-20 h-20 text-green-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>
+                            <svg className="w-16 h-16 text-green-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>
                         </div>
                         <span className="col-start-2 col-span-4 row-span-1 self-center text-gray-600">Call us directly at</span>
                         <span className="col-start-2 col-span-4 row-span-1 self-center text-sky-600 text-xl font-bold leading-none"> 0786082841</span>
@@ -21,7 +21,7 @@ export default function Contactus(){
                     </div>
                     <div className="grid grid-cols-5 grid-rows-3 bg-white shadow col-start-1 col-span-2 row-start-2 py-10 md:pl-8">
                         <div className="col-start-1 row-start-1 row-span-2 self-center">
-                            <svg className="h-20 w-20 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
+                            <svg className="h-16 w-16 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
                         </div>
                         <span className="col-start-2 col-span-4 row-span-1 self-center text-gray-600 pl-2">Chat with our customer care</span>
                         <div className="col-start-2 col-span-4 row-span-2 self-center text-white bg-sky-600 cursor-pointer hover:bg-green-600 active:bg-red-500 py-2 px-6 justify-self-start">Chat with caring people</div>

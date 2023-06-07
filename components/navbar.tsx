@@ -13,11 +13,11 @@ export default function NavBar({ page }: any){
         <div className="hidden md:flex justify-between text-lg text-center w-1/2 font-normal">
             {menu.map(( item => (
               <Link passHref={true} key={item} href={"/" + item}>
-                  <div className={`${route === item ? "bg-green-600 text-gray-900 px-2 py-1": "text-gray-900"} capitalize hover:px-2 py-1 rounded hover:text-white hover:bg-green-300 hover:font-medium`}>{item === "" ? "Home" : item}</div>
+                  <div className={`${route === item ? "bg-green-600 text-gray-900 px-2 py-1" : "text-gray-900"} capitalize hover:px-2 py-1 rounded hover:text-white hover:bg-green-300 hover:font-medium`}>{item === "" ? "Home" : item}</div>
               </Link>
             )))}
         </div>
-        <div className="px-3 flex md:hidden justify-between h-12 w-full">
+        <div className="px-4 flex md:hidden justify-between h-12 w-full">
             <Link passHref={true} href="/" className="group flex flex-col relative justify-center self-center hover:self-end items-center">
               <svg className="h-7 w-7 text-gray-700 group-hover:h-10 group-hover:w-10 group-hover:text-white group-hover:bg-sky-800 group-hover:rounded-full group-hover:p-2 group-hover:absolute group-hover:bottom-6 group-hover:outline"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="5 12 3 12 12 3 21 12 19 12" />  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
               <div className="hidden group-hover:flex bg-white font-bold text-sky-900 py-1">Home</div>

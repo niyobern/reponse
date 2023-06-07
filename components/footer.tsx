@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Footer(){
     return (<div className="flex flex-col bg-green-300 border-t border-white w-full order-3">
-        <div className="flex flex-col md:flex-row text-2xl text-blue-900 font-medium mb-11 md:mb-0 mt-6 md:mt-0 p-4 items-center justify-between">
+        <div className="flex flex-col md:flex-row text-2xl gap-4 text-blue-900 font-medium mb-11 md:mb-0 p-4 items-center justify-between">
             <p className="order-2 md:order-1">© Ecogenius Conserve 2023</p>
             <div className="list-disc gap-6 flex order-1 md:order-2">
                 <a href="https://linkedin.com/in/ecogenius-conserve-610a67275"><svg className="w-8 h-8 text-blue-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" ></path> </svg></a>
