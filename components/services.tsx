@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function Services({ page }: any){
 
-    return (<div className="flex flex-col md:flex-row md:py-20 my-6 md:px-6 gap-6 md:gap-12 justify-between items-stretch md:h-screen relative">
+    return (<div className="flex flex-col md:flex-row md:py-20 md:px-6 gap-6 md:gap-12 justify-between items-stretch md:h-screen relative">
         <div className="bg-yellow-300 w-full flex flex-col pb-8 md:py-auto">
             <Image alt="Growth Image" src={growth} height={500} width={500} className="w-1/2 self-center"/>
             <span className="text-2xl font-medium self-center text-gray-800">Marketing and sales</span>

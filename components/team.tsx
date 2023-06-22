@@ -6,9 +6,9 @@ import linkedin from "../public/images/linkedin.png"
 
 export default function TeamComponent(){
     return (
-        <div className="container mx-auto shadow-inner bg-green-600 shadow-white md:border-t-2 -mt-8 md:mt-0 border-white p-4">
-            <h1 className="text-4xl font-bold text-center text-white">Meet Our Team</h1>
-            <div className="flex flex-col md:flex-row gap-4 md:gap-0 flex-wrap justify-center mt-8">
+        <div className="bg-green-600 -mt-8 md:mt-0">
+            <h1 className="text-4xl font-bold text-center text-white py-4">Meet Our Team</h1>
+            <div className="flex flex-col md:flex-row gap-4 md:gap-0 flex-wrap justify-center">
            {/* <!-- Team member card --> */}
           <div className="w-full md:w-1/4 bg-white rounded overflow-hidden shadow-lg md:m-4 flex flex-col justify-between">
             <Image height={500} width={500} className="w-full rounded-full px-2 md:px-4" src={avatar} alt="Team member photo"></Image>
