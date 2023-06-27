@@ -1,7 +1,6 @@
 import Image from "next/image"
 import background from "../public/images/extension.png"
 import Link from "next/link"
-import contents from "./contents.json"
 
 export default function Hero({data}: any){
     const text = JSON.parse(data)
