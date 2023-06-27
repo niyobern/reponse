@@ -2,20 +2,55 @@ import Image from "next/image"
 import logo from "../public/images/logo.png"
 import { useRouter } from "next/router"
 import Link from "next/link"
+import { useEffect, useState } from "react"
+import axios from "axios"
 
-export default function NavBar({ page }: any){
+export default function NavBar({ language }: any){
     const menu = ["", "extension", "market", "about", "contacts", "testimonials"]
     const router = useRouter()
     const route = router.pathname.slice(1)
+    const [lang, setLang] = useState(language)
+
+    useEffect(() => {
+      if (!language){
+        setLang(window.localStorage.getItem("lang"))
+      } else {
+        window.localStorage.setItem("lang", language)
+      }
+    })
+
+    function changeLang(){
+      if (lang == "gb"){
+        setLang("rw")
+        window.localStorage.setItem("lang", "rw")
+        axios.post("/", {lang: "rw"})
+        .then(() => router.reload())
+      } else {
+        setLang("gb")
+        window.localStorage.setItem("lang", "gb")
+        axios.post("/", {lang: "gb"})
+        .then(() => router.reload())
+      }
+    }
 
     return (<div className="mb-0 md:px-10  md:py-2 flex flex-row items-center justify-between fixed md:sticky z-50 order-last md:order-first bottom-0 md:top-0 w-full bg-white shadow-inner shadow-white">
-        <Image src={logo} alt="logo" className="h-12 w-auto hidden md:flex bg-black"/>
+        <div className="flex flex-row justify-start items-center">
+          <Image src={logo} alt="logo" className="h-12 w-auto hidden md:flex"/>
+          <div className="hidden md:flex flex-col leading-none pl-1">
+            <span className="uppercase text-xl font-medium leading-none">Ecogenius</span>
+            <span className="text-lime-600 font-semibold text-2xl leading-none self-center text-justify tracking-wider">Conserve</span>
+          </div>
+        </div>
         <div className="hidden md:flex justify-between text-lg text-center w-1/2 font-normal">
             {menu.map(( item => (
               <Link passHref={true} key={item} href={"/" + item}>
                   <div className={`${route === item ? "bg-green-600 text-gray-900 px-2 py-1" : "text-gray-900"} capitalize hover:px-2 py-1 rounded hover:text-white hover:bg-green-300 hover:font-medium`}>{item === "" ? "Home" : item}</div>
               </Link>
             )))}
+            <div onClick={changeLang} className="group flex gap-2 rounded">
+              <span className="hidden text-blue-900 group-hover:flex">{lang == "gb" ? "English" : "Kinyarwanda"}</span>
+              <span className={`fi fi-${lang} text-2xl`}/>
+            </div>
         </div>
         <div className="px-4 flex md:hidden justify-between h-12 w-full">
             <Link passHref={true} href="/" className="group flex flex-col relative justify-center self-center hover:self-end items-center">

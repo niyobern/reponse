@@ -1,18 +1,35 @@
 import Image from "next/image"
 import logo from "../public/images/logo.png"
 import "node_modules/flag-icons/css/flag-icons.min.css"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
+import { useRouter } from "next/router"
+import axios from "axios"
 
-export default function AppBar({ page }: any){
+export default function AppBar({ language }: any){
+  const router = useRouter()
     const menu = ["Home", "Extension", "Marketing", "About", "Contact", "Testimonials"]
-    const [lang, setLang] = useState("gb")
+    const [lang, setLang] = useState(language)
+
+    useEffect(() => {
+      if (!language){
+        setLang(window.localStorage.getItem("lang"))
+      } else {
+        window.localStorage.setItem("lang", language)
+      }
+    })
 
     function changeLang(){
       if (lang == "gb"){
         setLang("rw")
+        window.localStorage.setItem("lang", "rw")
+        axios.post("/", {lang: "rw"})
+        .then(() => router.reload())
       } else {
         setLang("gb")
+        window.localStorage.setItem("lang", "gb")
+        axios.post("/", {lang: "gb"})
+        .then(() => router.reload())
       }
     }
 
