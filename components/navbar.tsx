@@ -13,7 +13,7 @@ export default function NavBar({ language }: any){
 
     useEffect(() => {
       if (!language){
-        setLang(window.localStorage.getItem("lang"))
+        setLang(window.localStorage.getItem("lang") || "gb")
       } else {
         window.localStorage.setItem("lang", language)
       }
