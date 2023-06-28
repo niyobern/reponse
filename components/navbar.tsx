@@ -35,7 +35,7 @@ export default function NavBar({ language }: any){
 
     return (<div className="mb-0 md:px-10  md:py-2 flex flex-row items-center justify-between fixed md:sticky z-50 order-last md:order-first bottom-0 md:top-0 w-full bg-white shadow-inner shadow-white">
         <div className="flex flex-row justify-start items-center">
-          <Image src={logo} alt="logo" className="h-12 w-auto hidden md:flex"/>
+          <Image src={logo} alt="logo" className="h-14 w-auto hidden md:flex"/>
           <div className="hidden md:flex flex-col leading-none pl-1">
             <span className="uppercase text-xl font-medium leading-none">Ecogenius</span>
             <span className="text-lime-600 font-semibold text-2xl leading-none self-center text-justify tracking-wider">Conserve</span>

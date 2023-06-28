@@ -1,4 +1,3 @@
-import path from "path"
 import { useRouter } from 'next/router';
 import Hero from '../components/hero';
 import Services from '../components/services';
@@ -6,6 +5,7 @@ import MissionVission from '../components/missionVision';
 import Layout from '../components/layout';
 import { handle, json, redirect } from 'next-runtime';
 import { readFile } from 'fs/promises';
+import path from "path"
 
 export const getServerSideProps = handle({
   async get({ cookies }: any) {
