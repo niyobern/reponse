@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function Hero({data}: any){
     const text = JSON.parse(data)
     return (
-    <div className="h-screen md:h-[90vh] bg-black flex flex-col md:grid grid-cols-5 p-12 gap-2 overflow-hidden relative items-center">
+    <div className="h-screen md:h-[90vh] bg-black flex flex-col md:grid grid-cols-5 md:p-12 gap-2 overflow-hidden relative items-center">
         <Image
          src={background}
          alt="background Image"
