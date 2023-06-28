@@ -1,21 +1,18 @@
 import { NextApiRequest, NextApiResponse } from "next"
 import { readFile, writeFile } from "fs/promises"
 import path from "path"
+import { kv } from "@vercel/kv"
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse){
-    const dir = path.join(process.cwd(), 'json')
     if (req.body.lang == "gb"){
-        const rawData = await readFile(dir + "/contents.json", {encoding: "utf-8"})
-        const data = JSON.parse(rawData)
-        data[req.body.id] = req.body.data
-        const json = JSON.stringify(data)
-        writeFile(dir + "/contents.json", json, {encoding: "utf-8"})
+        const data: any = await kv.hgetall("gb");
+        data[req.body.id] = req.body.data;
+        kv.hset("gb", data)
     } else {
-        const rawData = await readFile(dir + "/contentsKiny.json", {encoding: "utf-8"})
-        const data = JSON.parse(rawData)
-        data[req.body.id] = req.body.data
-        const json = JSON.stringify(data)
-        writeFile(dir + "/contentsKiny.json", json, {encoding: "utf-8"})
+        const data: any = await kv.hgetall("rw");
+        data[req.body.id] = req.body.data;
+        kv.hset("rw", data)
+
     }
-    res.end("OKay")
+    res.end("Okay")
 }
