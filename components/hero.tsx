@@ -5,14 +5,14 @@ import Link from "next/link"
 export default function Hero({data}: any){
     const text = JSON.parse(data)
     return (
-    <div className="h-screen md:h-[90vh] bg-black flex flex-col md:grid grid-cols-5 md:p-12 gap-2 overflow-hidden relative items-center">
+    <div className="h-screen md:h-[90vh] bg-black flex flex-col md:grid grid-cols-5 p-2 md:p-12 gap-2 overflow-hidden relative items-center">
         <Image
          src={background}
          alt="background Image"
          fill={true}
          className="object-fill z-0 blur-sm brightness-50"
         />
-        <div className="col-span-3 mr-12 pt-12 md:p-6 flex flex-col gap-8 z-10">
+        <div className="col-span-3 md:mr-12 pt-12 md:p-6 flex flex-col gap-8 z-10">
             <p>
                 <span className="text-4xl text-white focus:bg-gray-900 focus:text-white" id="hero1">{text.hero1}</span>
                 <span className="text-4xl text-yellow-400" id="hero2">{text.hero2}</span>
