@@ -11,7 +11,7 @@ export default function Aboutus({ data }: any){
                 <Image src={logo} alt="logo" width={500} height={500} className="w-48 h-48 self-center md:hidden"/>
                 <div>
                     <p className="my-4 text-gray-800 leading-normal text-center" id="about2">{text.about2}</p>
-                    <p className="my-4 text-gray-800 text-lg leading-normal text-center" id="about40">{"hokhu"}</p>
+                    <p className="my-4 text-gray-800 text-lg leading-normal text-center" id="about40">{text.about40}</p>
                 </div>
             </div>
             <div className="flex flex-col bg-teal-700 py-4 px-2 md:px-4 h-full">
