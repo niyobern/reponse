@@ -6,8 +6,8 @@ import { kv } from '@vercel/kv';
 
 export const getServerSideProps = handle({
   async get({ cookies }: any) {
-    const lang = cookies.get("lang")
-    let  result = await kv.hgetall(lang || "gb")
+    const lang = cookies.get("lang") || "gb"
+    let  result = await kv.hgetall(lang)
     const data = JSON.stringify(result)
     return json({data, lang});
   },
