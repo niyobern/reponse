@@ -36,11 +36,11 @@ export default function Home({ data } : any) {
   const router = useRouter()
   return (
     <Layout language={lang}>
-      <div>
+{/*       <div>
         <Hero data={data[lang]}/>
         <Services data={data[lang]}/>
         <MissionVission data={data[lang]}/>
-      </div>
+      </div> */}
     </Layout>
   );
 }
