@@ -29,18 +29,18 @@ export async function getStaticProps() {
 
 export default function Home({ data } : any) {
   const lang = "gb"
-  useEffect(() => {
-    console.log(JSON.stringify(data[lang]))
-  }
-  )
+  // useEffect(() => {
+  //   console.log(JSON.stringify(data[lang]))
+  // }
+  // )
   const router = useRouter()
   return (
     <Layout language={lang}>
-{/*       <div>
+      <div>
         <Hero data={JSON.stringify(data[lang])}/>
         <Services data={JSON.stringify(data[lang])}/>
         <MissionVission data={JSON.stringify(data[lang])}/>
-      </div> */}
+      </div>
     </Layout>
   );
 }
