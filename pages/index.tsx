@@ -37,9 +37,9 @@ export default function Home({ data } : any) {
   return (
     <Layout language={lang}>
       <div>
-        <Hero data={gb}/>
-        <Services data={gb}/>
-        <MissionVission data={gb}/>
+        <Hero data={data[lang]}/>
+        <Services data={data[lang]}/>
+        <MissionVission data={data[lang]}/>
       </div>
     </Layout>
   );
