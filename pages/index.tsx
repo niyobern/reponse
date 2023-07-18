@@ -27,14 +27,15 @@ export async function getStaticProps() {
 
 export default function Home(props : any) {
   const lang = "gb"
+  const gb = {props}
   const router = useRouter()
   return (
     <Layout language={lang}>
-{/*       <div>
+      <div>
         <Hero data={gb}/>
         <Services data={gb}/>
         <MissionVission data={gb}/>
-      </div> */}
+      </div>
     </Layout>
   );
 }
