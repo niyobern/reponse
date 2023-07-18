@@ -3,7 +3,7 @@ import Hero from '../components/hero';
 import Services from '../components/services';
 import MissionVission from '../components/missionVision';
 import Layout from '../components/layout';
-import { handle, json, redirect } from 'next-runtime';
+// import { handle, json, redirect } from 'next-runtime';
 import { kv } from '@vercel/kv';
 
 // export const getServerSideProps = handle({
@@ -25,7 +25,7 @@ export async function getStaticProps() {
   return {props: { gb }}
 }
 
-export default function Home({ gb }: any) {
+export default function Home(props) {
   const lang = "gb"
   const router = useRouter()
   return (
