@@ -5,6 +5,7 @@ import MissionVission from '../components/missionVision';
 import Layout from '../components/layout';
 // import { handle, json, redirect } from 'next-runtime';
 import { kv } from '@vercel/kv';
+import {useEffect} from "react"
 
 // export const getServerSideProps = handle({
 //   async get({ cookies }: any) {
@@ -28,15 +29,18 @@ export async function getStaticProps() {
 
 export default function Home(props : any) {
   const lang = "gb"
-  const gb = {props: {data}}
+  useEffect(() => {
+    console.log(props)
+  }
+  )
   const router = useRouter()
   return (
     <Layout language={lang}>
-      <div>
+{/*       <div>
         <Hero data={gb}/>
         <Services data={gb}/>
         <MissionVission data={gb}/>
-      </div>
+      </div> */}
     </Layout>
   );
 }
