@@ -19,7 +19,7 @@ export const getServerSideProps = handle({
   },
 });
 
-export const getStaticProps = async => {
+export async function getStaticProps {
   const rw = await kv.hgetall("rw")
   const gb = kv.hgetall("gb")
   return {props: { data: {rw: rw, gb: gb} }}
