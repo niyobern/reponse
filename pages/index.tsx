@@ -23,7 +23,7 @@ import {useEffect} from "react"
 export async function getStaticProps() {
   const rw = await kv.hgetall("rw")
   const gb = await kv.hgetall("gb")
-  const data = {gb: gb, rw: rw}
+  const data = JSON.stringify({gb: gb, rw: rw})
   return {props: { data }}
 }
 
