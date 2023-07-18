@@ -22,10 +22,10 @@ import { kv } from '@vercel/kv';
 export async function getStaticProps() {
   const rw = await kv.hgetall("rw")
   const gb = await kv.hgetall("gb")
-  return {props: { rw, gb }}
+  return {props: { gb }}
 }
 
-export default function Home({ rw, gb }: any) {
+export default function Home({ gb }: any) {
   const lang = "gb"
   const router = useRouter()
   return (
