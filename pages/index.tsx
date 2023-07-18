@@ -23,23 +23,23 @@ import {useEffect} from "react"
 export async function getStaticProps() {
   const rw = await kv.hgetall("rw")
   const gb = await kv.hgetall("gb")
-  const data = JSON.stringify({gb: gb, rw: rw})
+  const data = {gb: gb, rw: rw}
   return {props: { data }}
 }
 
 export default function Home({ data } : any) {
   const lang = "gb"
   useEffect(() => {
-    console.log(data[lang])
+    console.log(JSON.stringify(data[lang]))
   }
   )
   const router = useRouter()
   return (
     <Layout language={lang}>
 {/*       <div>
-        <Hero data={data[lang]}/>
-        <Services data={data[lang]}/>
-        <MissionVission data={data[lang]}/>
+        <Hero data={JSON.stringify(data[lang])}/>
+        <Services data={JSON.stringify(data[lang])}/>
+        <MissionVission data={JSON.stringify(data[lang])}/>
       </div> */}
     </Layout>
   );
