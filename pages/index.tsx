@@ -25,7 +25,7 @@ export async function getStaticProps() {
   return {props: { gb }}
 }
 
-export default function Home(props) {
+export default function Home(props : any) {
   const lang = "gb"
   const router = useRouter()
   return (
