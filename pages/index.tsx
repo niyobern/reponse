@@ -5,7 +5,7 @@ import MissionVission from '../components/missionVision';
 import Layout from '../components/layout';
 // import { handle, json, redirect } from 'next-runtime';
 import { kv } from '@vercel/kv';
-import {useEffect} from "react"
+import { useEffect, useState} from "react"
 
 // export const getServerSideProps = handle({
 //   async get({ cookies }: any) {
@@ -28,11 +28,11 @@ export async function getStaticProps() {
 }
 
 export default function Home({ data } : any) {
-  const lang = "gb"
-  // useEffect(() => {
-  //   console.log(JSON.stringify(data[lang]))
-  // }
-  // )
+  const [lang, setLang] = useState("gb")
+  useEffect(() => {
+    setLang(window.localStorage.getItem("lang"))
+  }, []
+  )
   const router = useRouter()
   return (
     <Layout language={lang}>
