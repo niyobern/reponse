@@ -22,7 +22,7 @@ import { kv } from '@vercel/kv';
 export async function getStaticProps() {
   const rw = await kv.hgetall("rw")
   const gb = await kv.hgetall("gb")
-  return {props: { gb }}
+  return {props: { gb: gb }}
 }
 
 export default function Home({ gb }: any) {
