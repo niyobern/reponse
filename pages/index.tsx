@@ -27,10 +27,10 @@ export async function getStaticProps() {
   return {props: { data }}
 }
 
-export default function Home(props : any) {
+export default function Home({ data } : any) {
   const lang = "gb"
   useEffect(() => {
-    console.log(props)
+    console.log(data[lang])
   }
   )
   const router = useRouter()
