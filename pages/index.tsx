@@ -22,12 +22,13 @@ import { kv } from '@vercel/kv';
 export async function getStaticProps() {
   const rw = await kv.hgetall("rw")
   const gb = await kv.hgetall("gb")
-  return {props: { gb }}
+  const data = {gb: gb, rw: rw}
+  return {props: { data }}
 }
 
 export default function Home(props : any) {
   const lang = "gb"
-  const gb = {props}
+  const gb = {props: {data}}
   const router = useRouter()
   return (
     <Layout language={lang}>
