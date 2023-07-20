@@ -34,7 +34,7 @@ export default function Home({ data } : any) {
     setLang(currentLang)
   }, []
   )
-  const router = useRouter()
+  // const router = useRouter()
   return (
     <Layout language={lang}>
       <div>

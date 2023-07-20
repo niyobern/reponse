@@ -1,24 +1,23 @@
 import Comments from "../components/comments";
 import Layout from "../components/layout";
-import { handle, json, redirect } from 'next-runtime';
 import { kv } from '@vercel/kv';
+import { useState, useEffect } from "react";
+export async function getStaticProps() {
+  const rw = await kv.hgetall("rw")
+  const gb = await kv.hgetall("gb")
+  const data = {gb: gb, rw: rw}
+  return {props: { data }}
+}
 
-export const getServerSideProps = handle({
-  async get({ cookies }: any) {
-    const lang = cookies.get("lang") || "gb"
-    let  result = await kv.hgetall(lang)
-    const data = JSON.stringify(result)
-    return json({data, lang});
-  },
-  async post({ req: { body }, cookies}: any) {
-    cookies.set("lang", body.lang)
-    return json({});
-  },
-});
-
-export default function Testimonials({ data, lang }: any){
+export default function Testimonials({ data }: any){
+  const [lang, setLang] = useState("gb")
+  useEffect(() => {
+    const currentLang = window.localStorage.getItem("lang") || "gb"
+    setLang(currentLang)
+  }, []
+  )
     return (
-      <Layout>
+      <Layout language={lang}>
         <div className="h-full">
           <Comments data={data}/>
         </div>

@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     // })
     document.addEventListener("dblclick", doubleclick)
   }
-  useEffect(handlethat)
+  // useEffect(handlethat)
   return (
     <Component {...pageProps}/>
   )

@@ -1,20 +1,17 @@
-import { handle, json } from "next-runtime";
-import { readFile } from "fs/promises";
 import { kv } from '@vercel/kv';
-
-export const getServerSideProps = handle({
-  async get({ cookies }: any) {
-    const lang = cookies.get("lang") || "gb"
-    let  result = await kv.hgetall(lang)
-    const data = JSON.stringify(result)
-    return json({data, lang});
-  },
-    async post({ req: { body }, cookies}: any) {
-      console.log(body)
-      cookies.set("lang", body.lang)
-      return json({});
-    },
-  });
-export default function Contents({ data, lang }: any){
-    return <div>{lang} {data}</div>
+import { useEffect, useState } from 'react';
+export async function getStaticProps() {
+  const rw = await kv.hgetall("rw")
+  const gb = await kv.hgetall("gb")
+  const data = {gb: gb, rw: rw}
+  return {props: { data }}
+}
+export default function Contents({ data }: any){
+  const [lang, setLang] = useState("gb")
+  useEffect(() => {
+    const currentLang = window.localStorage.getItem("lang") || "gb"
+    setLang(currentLang)
+  }, []
+  )
+    return <div>{lang} {JSON.stringify(data[lang])}</div>
 }
