@@ -10,7 +10,7 @@ export async function getStaticProps() {
   return {props: { data }}
 }
 
-export default function contact({ data }: any){
+export default function Contact({ data }: any){
   const [lang, setLang] = useState("gb")
   useEffect(() => {
     const currentLang = window.localStorage.getItem("lang") || "gb"
