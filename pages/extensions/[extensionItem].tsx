@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Layout from "../../components/layout";
 import { kv } from '@vercel/kv';
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const rw = await kv.hgetall("rw")
   const gb = await kv.hgetall("gb")
   const data = {gb: gb, rw: rw}
