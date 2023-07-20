@@ -30,7 +30,8 @@ export async function getStaticProps() {
 export default function Home({ data } : any) {
   const [lang, setLang] = useState("gb")
   useEffect(() => {
-    setLang(window.localStorage.getItem("lang"))
+    const currentLang = window.localStorage.getItem("lang") || "gb"
+    setLang(currentLang)
   }, []
   )
   const router = useRouter()
