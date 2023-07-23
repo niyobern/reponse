@@ -55,13 +55,13 @@ export default function TeamComponent(){
           <div className="w-full md:w-1/5 bg-white rounded overflow-hidden shadow-lg md:m-4 flex flex-col justify-between">
             <Image height={100} width={100} className="w-full h-full rounded-full px-2 md:px-4" src={avatar4} alt="Team member photo"></Image>
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Bob Doe</div>
-              <p className="text-gray-700 text-base">Marketing manager and content writer</p>
+              <div className="font-bold text-xl mb-2">Kamanzi Claudine</div>
+              <p className="text-gray-700 text-base">Co-found and CEO</p>
             </div>
             <div className="px-6 py-4 flex justify-center">
                     {/* <!-- Social icons --> */}
-                    <a href="#" className="mx-2"><Image height={32} width={32} src={twitter} alt="Twitter icon"></Image></a>
-                    <a href="#" className="mx-2"><Image height={32} width={32} src={linkedin} alt="LinkedIn icon"></Image></a>
+                    <a href="https://twitter.com/kamanzi_claudin" className="mx-2"><Image height={32} width={32} src={twitter} alt="Twitter icon"></Image></a>
+                    <a href="https://www.linkedin.com/in/kamanzi-claudine-5b794b1b1/" className="mx-2"><Image height={32} width={32} src={linkedin} alt="LinkedIn icon"></Image></a>
                     <a href="#" className="mx-2"><Image height={32} width={32} src={facebook} alt="Facebook icon"></Image></a>
             </div>
           </div>
