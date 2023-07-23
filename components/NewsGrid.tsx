@@ -1,5 +1,5 @@
 import Image from "next/image"
-import image from "../public/images/extension.png"
+import image from "../public/images/P2411029 REP1 (1).jpg"
 import Link from "next/link"
 
 export default function NewsGrid(){
