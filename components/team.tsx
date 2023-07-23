@@ -16,14 +16,14 @@ export default function TeamComponent(){
           <div className="w-full md:w-1/5 bg-white rounded overflow-hidden shadow-lg md:m-4 flex flex-col justify-between">
             <Image height={100} width={100} className="w-full h-full rounded-full px-2 md:px-4" src={avatar1} alt="Team member photo"></Image>
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">John Doe</div>
-              <p className="text-gray-700 text-base">Web developer and designer</p>
+              <div className="font-bold text-xl mb-2">Iradukunda Reponse</div>
+              <p className="text-gray-700 text-base">Co-founder and CEO</p>
             </div>
             <div className="px-6 py-4 flex justify-center">
                     {/* <!-- Social icons --> */}
-                    <a href="#" className="mx-2"><Image height={32} width={32} src={twitter} alt="Twitter icon"></Image></a>
-                    <a href="#" className="mx-2"><Image height={32} width={32} src={linkedin} alt="LinkedIn icon"></Image></a>
-                    <a href="#" className="mx-2"><Image height={32} width={32} src={facebook} alt="Facebook icon"></Image></a>
+                    <a href="https://twitter.com/repoiradukunda/" className="mx-2"><Image height={32} width={32} src={twitter} alt="Twitter icon"></Image></a>
+                    <a href="https://www.linkedin.com/in/iradukunda-reponse-92728a232" className="mx-2"><Image height={32} width={32} src={linkedin} alt="LinkedIn icon"></Image></a>
+                    <a href="https://www.facebook.com/iradukunda.reponseeagle" className="mx-2"><Image height={32} width={32} src={facebook} alt="Facebook icon"></Image></a>
             </div>
           </div>
           <div className="w-full md:w-1/5 bg-white rounded overflow-hidden shadow-lg md:m-4 flex flex-col justify-between">
