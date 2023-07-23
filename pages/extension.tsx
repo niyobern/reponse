@@ -20,7 +20,7 @@ export default function Extension(){
     return (
     <Layout language={lang}>
         <div className="h-full">
-            <NewsGrid/>
+          {"No Content" || "<NewsGrid/>"}
         </div>
     </Layout>
     )
