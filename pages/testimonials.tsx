@@ -19,7 +19,7 @@ export default function Testimonials({ data }: any){
     return (
       <Layout language={lang}>
         <div className="h-full">
-          <Comments data={JSON.stringify(data[lang])}/>
+          {"No Content" || <Comments data={JSON.stringify(data[lang])}/>}
         </div>
       </Layout>
     )
