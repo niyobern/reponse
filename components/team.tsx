@@ -14,7 +14,7 @@ export default function TeamComponent(){
             <div className="flex flex-col md:flex-row gap-4 md:gap-0 flex-wrap justify-center">
            {/* <!-- Team member card --> */}
           <div className="w-full md:w-1/5 bg-white rounded overflow-hidden shadow-lg md:m-4 flex flex-col justify-between">
-            <Image height={500} width={500} className="w-full rounded-full px-2 md:px-4" src={avatar1} alt="Team member photo"></Image>
+            <Image height={100} width={100} className="w-full rounded-full px-2 md:px-4" src={avatar1} alt="Team member photo"></Image>
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">John Doe</div>
               <p className="text-gray-700 text-base">Web developer and designer</p>
