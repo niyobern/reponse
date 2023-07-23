@@ -1,5 +1,6 @@
 import Image from "next/image"
 import image from "../public/images/hubspot.jpg"
+import image2 from "../public/images/Rep 3.jpg"
 import logo from "../public/images/logo.png"
 
 export default function Aboutus({ data }: any){
@@ -19,28 +20,28 @@ export default function Aboutus({ data }: any){
                 <div className="flex flex-col md:grid grid-cols-4 gap-4 md:gap-8">
                     <div className="flex flex-col items-center">
                         <div className="flex flex-col items-center pb-2">
-                            <svg className="h-16 w-16 text-white"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
+                            <svg className="h-16 w-16 text-teal-700"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
                             <div className="text-white text-xl" id="about4">{text.about4}</div>
                         </div>
                         <p className="text-justify text-white text-sm" id="about5">{text.about5}</p>
                     </div>
                     <div className="flex flex-col items-center">
                         <div className="flex flex-col items-center pb-2">
-                            <svg className="h-16 w-16 text-white"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
+                            <svg className="h-16 w-16 text-teal-700"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
                             <div className="text-white text-xl"  id="about6">{text.about6}</div>
                         </div>
                         <p className="text-justify text-white text-sm" id="about7">{text.about7}</p>
                     </div>
                     <div className="flex flex-col items-center">
                         <div className="flex flex-col items-center pb-2">
-                            <svg className="h-16 w-16 text-white"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
+                            <svg className="h-16 w-16 text-teal-700"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
                             <div className="text-white text-xl" id="about8">{text.about8}</div>
                         </div>
                         <p className="text-justify text-white text-sm" id="about9">{text.about9}</p>
                     </div>
                     <div className="flex flex-col items-center">
                         <div className="flex flex-col items-center pb-2">
-                            <svg className="h-16 w-16 text-white"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
+                            <svg className="h-16 w-16 text-teal-700"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
                             <div className="text-white text-xl" id="about10">{text.about10}</div>
                         </div>
                         <p className="text-justify text-white text-sm" id="about11">{text.about11}</p>
@@ -49,7 +50,7 @@ export default function Aboutus({ data }: any){
             </div>
             
             <div className="flex flex-col bg-sky-400 py-4 px-2 md:px-4 h-96 md:h-full relative overflow-hidden">
-                <Image src={image} alt="image" fill={true} className="object-fill"/>
+                <Image src={image2} alt="image" fill={true} className="object-fill"/>
                 <div className="text-2xl font-medium text-sky-400 text-center mb-2" id="about12">{text.about12}</div>
                 <div className="flex flex-col md:grid grid-cols-3 gap-4 md:gap-8">
                     <div className="flex flex-col items-center">
@@ -81,28 +82,28 @@ export default function Aboutus({ data }: any){
                 <div className="flex flex-col md:grid grid-cols-4 gap-2 md:gap-4">
                     <div className="flex flex-col items-center bg-sky-800 p-2 md:p-4 rounded-lg shadow-xl">
                         <div className="flex flex-col items-center pb-2">
-                            <svg className="h-16 w-16 text-white"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
+                            <svg className="h-16 w-16 text-sky-800"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
                             <div className="text-white text-xl" id="about14">{text.about14}</div>
                         </div>
                     <p className="text-justify text-white text-sm" id="about15">{text.about15}</p>
                     </div>
                     <div className="flex flex-col items-center bg-sky-800 p-2 md:p-4 rounded-lg shadow-xl">
                         <div className="flex flex-col items-center pb-2">
-                            <svg className="h-16 w-16 text-white"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
+                            <svg className="h-16 w-16 text-sky-800"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
                             <div className="text-white text-xl" id="about16">{text.about16}</div>
                         </div>
                         <p className="text-justify text-white text-sm" id="about17">{text.about17}</p>
                     </div>
                     <div className="flex flex-col items-center bg-sky-800 p-2 md:p-4 rounded-lg shadow-xl">
                         <div className="flex flex-col items-center pb-2">
-                            <svg className="h-16 w-16 text-white"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
+                            <svg className="h-16 w-16 text-sky-800"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
                             <div className="text-white text-xl" id="about18">{text.about18}</div>
                         </div>
                         <p className="text-justify text-white text-sm" id="about19">{text.about19}</p>
                     </div>
                     <div className="flex flex-col items-center bg-sky-800 p-2 md:p-4 rounded-lg shadow-xl">
                         <div className="flex flex-col items-center pb-2">
-                            <svg className="h-16 w-16 text-white"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
+                            <svg className="h-16 w-16 text-sky-800"  width="48" height="48" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="12" y1="8" x2="12.01" y2="8" />  <polyline points="11 12 12 12 12 16 13 16" /></svg>
                             <div className="text-white text-xl" id="about20">{text.about20}</div>
                         </div>
                         <p className="text-justify text-white text-sm" id="about21">{text.about21}</p>
