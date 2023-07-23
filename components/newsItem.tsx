@@ -1,5 +1,5 @@
 import Image from "next/image"
-import image from "../public/images/hubspot.jpg"
+import image from "../public/images/P2411029 REP1 (1).jpg"
 import Link from "next/link"
 import { useEffect } from "react"
 import { useRouter } from "next/router"
