@@ -15,7 +15,7 @@ export default function Hero({data}: any){
         <div className="col-span-3 md:mr-12 pt-12 md:p-6 flex flex-col gap-8 z-10">
             <p>
                 <span className="text-4xl text-white focus:bg-gray-900 focus:text-white" id="hero1">We are Ecogenius, we are dedicated to your </span> {/*text.hero1*/}
-                <span className="text-4xl text-yellow-400" id="hero2">{text.hero2}</span>
+                <span className="text-4xl text-yellow-400" id="hero2">Development</span>
             </p>
             <div className="text-xl font-light text-gray-300" id="hero3">{text.hero3}</div>
         </div>
