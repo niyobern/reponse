@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image from "../public/images/hubspot.jpg";
+import image from "../public/images/Rep 6.jpg";
 
 export default function Contactus({ data }: any){
     const text = JSON.parse(data)
