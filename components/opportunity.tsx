@@ -3,7 +3,7 @@ import image from "../public/images/hubspot.jpg"
 import image2 from "../public/images/Rep 3.jpg"
 import logo from "../public/images/logo.png"
 
-export default function Aboutus({ data }: any){
+export default function Opportunity({ data }: any){
     const text = JSON.parse(data)
     return (
         <div className="flex flex-col gap-1 md:gap-4 h-content bg-green-600">
