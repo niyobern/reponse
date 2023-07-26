@@ -6,7 +6,7 @@ import logo from "../public/images/logo.png"
 export default function Aboutus({ data }: any){
     const text = JSON.parse(data)
     return (
-        <div className="flex flex-col gap-1 md:gap-4 h-content">
+        <div className="flex flex-col gap-1 md:gap-4 h-content bg-green-600">
             <div className="flex flex-col self-center md:px-24 pt-4">
                 <h1 className="text-center text-2xl font-medium text-gray-900" id="about1">{text.about1}</h1>
                 <Image src={logo} alt="logo" width={500} height={500} className="w-48 h-48 self-center md:hidden"/>
