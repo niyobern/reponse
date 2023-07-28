@@ -19,9 +19,9 @@ export default function Opportunities({ data }: any){
   )
     return (
       <Layout language={lang}>
-        <div className="h-fit flex flex-col">
-            <Opportunity data={JSON.stringify(data[lang])}/>
-        </div>
-      </Layout>
+      <div className="h-full">
+          <div>No Opportunity</div>
+      </div>
+  </Layout>
     )
     }

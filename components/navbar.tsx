@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 
 export default function NavBar({ language }: any){
-    const menu = ["", "extension", "market", "about", "contacts", "testimonials"]
+    const menu = ["", "extension", "market", "about", "contacts", "testimonials", "opportunities"]
     const router = useRouter()
     const route = router.pathname.slice(1)
     const [lang, setLang] = useState(language)
