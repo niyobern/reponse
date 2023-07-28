@@ -34,9 +34,9 @@ export default function TeamComponent(){
             </div>
             <div className="px-6 py-4 flex justify-center">
                     {/* <!-- Social icons --> */}
-                    <a href="#" className="mx-2"><Image height={32} width={32} src={twitter} alt="Twitter icon"></Image></a>
-                    <a href="#" className="mx-2"><Image height={32} width={32} src={linkedin} alt="LinkedIn icon"></Image></a>
-                    <a href="#" className="mx-2"><Image height={32} width={32} src={facebook} alt="Facebook icon"></Image></a>
+                    <a href="http://linkedin.com/in/thadee-ubayeho-95152a22b" className="mx-2"><Image height={32} width={32} src={twitter} alt="Twitter icon"></Image></a>
+                    <a href="https://twitter.com/UbayehoThadee" className="mx-2"><Image height={32} width={32} src={linkedin} alt="LinkedIn icon"></Image></a>
+                    <a href="https://www.facebook.com/thau.man.904" className="mx-2"><Image height={32} width={32} src={facebook} alt="Facebook icon"></Image></a>
             </div>
           </div>
           <div className="w-full md:w-1/5 bg-white rounded overflow-hidden shadow-lg md:m-4 flex flex-col justify-between">
