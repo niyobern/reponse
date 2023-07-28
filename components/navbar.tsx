@@ -41,7 +41,7 @@ export default function NavBar({ language }: any){
             <span className="text-lime-600 font-semibold text-2xl leading-none self-center text-justify tracking-wider">Conserve</span>
           </div>
         </div>
-        <div className="hidden md:flex justify-between text-lg text-center w-1/2 font-normal">
+        <div className="hidden md:flex justify-between gap-4 text-lg text-center w-1/2 font-normal">
             {menu.map(( item => (
               <Link passHref={true} key={item} href={"/" + item}>
                   <div className={`${route === item ? "bg-green-600 text-gray-900 px-2 py-1" : "text-gray-900"} capitalize hover:px-2 py-1 rounded hover:text-white hover:bg-green-300 hover:font-medium`}>{item === "" ? "Home" : item}</div>
