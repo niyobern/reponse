@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ChangeEvent } from "react";
 import Link from "next/link";
 
-export default function AddExtension(){
+export default function AddOpportunity(){
     const [images, setImages] = useState<File[]>([])
     const [formData, setFormData] = useState({"title": "", "content": ""})
     function handleFileSelect(evt: any) {
@@ -92,7 +92,7 @@ export default function AddExtension(){
                     <Link href="/upload/opportunities" className="py-2 px-4 rounded hover:bg-gray-100 cursor-pointer">Opportunities</Link>
                     <Link href="/upload/market" className="py-2 px-4 rounded hover:bg-gray-100 cursor-pointer">Market</Link>
                 </div>
-                <h1 className="text-blue-900 font-medium w-fit">Add Extension</h1>
+                <h1 className="text-blue-900 font-medium w-fit">Add Opportunity</h1>
                 {/* Form */}
                 <div className="w-full bg-gray-100 p-2 gap-4 md:p-3">
                     <div className="flex flex-col gap-2">
@@ -100,8 +100,12 @@ export default function AddExtension(){
                         <input onChange={handleChanges} className="p-1" id="title" name="title" type="text" placeholder="  Title"/>
                     </div>
                     <div className="flex flex-col gap-2">
+                        <label htmlFor="title" className="text-blue-900">Link</label>
+                        <input onChange={handleChanges} className="p-1" id="link" name="link" type="text" placeholder="  Link"/>
+                    </div>
+                    <div className="flex flex-col gap-2">
                         <label htmlFor="content" className="text-blue-900">Content</label>
-                        <textarea onChange={handleChanges} className="h-20 p-1" id="content" name="content" placeholder="  Content"/>
+                        <textarea onChange={handleChanges} className="h-20 p-1" id="description" name="description" placeholder="  Content"/>
                     </div>
                     <div className="flex flex-col gap-2">
                         <label htmlFor="files" className="font-medium text-blue-900 pt-2">Add Image(s)</label>
