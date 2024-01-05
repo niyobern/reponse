@@ -1,6 +1,7 @@
 import VideoJS from '../../components/VideoJS'
 import { useRef } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const VidPlay = () => {
   const playerRef = useRef(null);
@@ -30,11 +31,16 @@ const VidPlay = () => {
   };
 
   return (
+    <>
+      <Head>
+       <title>visit www.jiprovisional.com</title>
+      </Head>
       <div className='flex flex-col items-center'>
         <div className='w-full lg:w-10/12'>
             <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
         </div>
       </div>
+    </>
   );
 }
 
