@@ -1,16 +1,15 @@
 import Opportunity from "../components/opportunity";
 import Layout from "../components/layout";
 import { useEffect, useState } from "react";
-import { kv } from '@vercel/kv';
+import axios from "axios";
 
-export async function getStaticProps() {
-  const rw = await kv.hgetall("rw")
-  const gb = await kv.hgetall("gb")
-  const data = {gb: gb, rw: rw}
-  return {props: { data }}
+export async function getServerSideProps() {
+  const data = await axios.get("https://reponse_backend-1-r0934826.deta.app/opportunities") 
+  const opportuities = data.data
+  return {props: { opportuities }}
 }
 
-export default function Opportunities({ data }: any){
+export default function Opportunities({ opportunities }: any){
   const [lang, setLang] = useState("gb")
   useEffect(() => {
     const currentLang = window.localStorage.getItem("lang") || "gb"
@@ -19,8 +18,10 @@ export default function Opportunities({ data }: any){
   )
     return (
       <Layout language={lang}>
-      <div className="h-full">
-          <div>No Opportunity</div>
+      <div className="h-full flex w-full justify-center">
+          <div className="w-full md:w-9/12 lg:w-1/2 flex flex-col">
+           {opportunities.map((opportunity: any) => <Opportunity opportunity={opportunity}/>)}
+          </div>
       </div>
   </Layout>
     )

@@ -2,15 +2,15 @@ import NewsGrid from "../components/NewsGrid";
 import Layout from "../components/layout";
 import { kv } from '@vercel/kv';
 import { useEffect, useState } from "react";
+import axios from "axios";
 
-export async function getStaticProps() {
-  const rw = await kv.hgetall("rw")
-  const gb = await kv.hgetall("gb")
-  const data = {gb: gb, rw: rw}
-  return {props: { data }}
+export async function getServerSideProps() {
+  const ext = await axios.get("https://reponse_backend-1-r0934826.deta.app/extensions")
+  const extensions = ext.data
+  return {props: { extensions }}
 }
 
-export default function Extension(){
+export default function Extension({ extensions }: any){
   const [lang, setLang] = useState("gb")
   useEffect(() => {
     const currentLang = window.localStorage.getItem("lang") || "gb"
@@ -20,7 +20,7 @@ export default function Extension(){
     return (
     <Layout language={lang}>
         <div className="h-full">
-          {"No Content" || "<NewsGrid/>"}
+          <NewsGrid extensions={extensions}/>
         </div>
     </Layout>
     )

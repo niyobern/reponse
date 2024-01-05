@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { ChangeEvent } from "react";
 import Link from "next/link";
+import axios from "axios"
 
 export default function AddOpportunity(){
     const [images, setImages] = useState<File[]>([])
     const [formData, setFormData] = useState({"title": "", "content": ""})
+    const [imageLinks, setImageLinks] = useState<string[]>([])
     function handleFileSelect(evt: any) {
         setImages([...images, ...evt.target.files])
     }
@@ -73,15 +75,19 @@ export default function AddOpportunity(){
     }
     function handleSubmit(evt: any) {
         evt.preventDefault()
-        const data = new FormData()
-        data.append("title", formData.title)
-        data.append("content", formData.content)
         images.forEach((image, i) => {
-            data.append(`image-${i}`, image)
+            const data = new FormData()
+            const fileExtension = image.name.split(".").pop()
+            data.append(`image-${i}.${fileExtension}`, image)
+            axios.post("https://reponse_backend-1-r0934826.deta.app/images", data)
+            .then(res => {
+                setImageLinks([...imageLinks, res.data])
+            })
         })
-        fetch("https://reponse_backend-1-r0934826.deta.app/images", {
-            method: "POST",
-            body: data
+        axios.post("https://reponse_backend-1-r0934826.deta.app/opportunities", {...formData, "images": imageLinks})
+        .then(res => {
+            console.log(res)
+            alert("Opportunity Added")
         })
     }
     return (
@@ -112,7 +118,7 @@ export default function AddOpportunity(){
                         <input accept="image/*" type="file" id="files" multiple={true} onChange={handleFileSelect} className="w-0 h-0"/>
                         <output className="flex flex-wrap" id="list"></output>
                     </div>
-                    <div className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 text-center rounded">Submit</div>
+                    <div onSubmit={handleSubmit} className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 text-center rounded">Submit</div>
                 </div>
             </div>
         </div>

@@ -39,7 +39,7 @@ export default function Home({ data } : any) {
     <Layout language={lang}>
       <div>
         <Hero data={JSON.stringify(data[lang])}/>
-        {/* <Services data={JSON.stringify(data[lang])}/> */}
+        <Services data={JSON.stringify(data[lang])}/>
         <MissionVission data={JSON.stringify(data[lang])}/>
       </div>
     </Layout>
