@@ -87,7 +87,7 @@ export default function AddExtension(){
         axios.post("https://reponse_backend-1-r0934826.deta.app/extensions", {...formData, "images": imageLinks})
         .then(res => {
             console.log(res)
-            alert("Opportunity Added")
+            alert("Extension Added")
         })
     }
     return (

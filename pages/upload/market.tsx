@@ -87,7 +87,7 @@ export default function AddProduct(){
         axios.post("https://reponse_backend-1-r0934826.deta.app/market", {...formData, "images": imageLinks})
         .then(res => {
             console.log(res)
-            alert("Opportunity Added")
+            alert("Product Added")
         })
     }
     return (
