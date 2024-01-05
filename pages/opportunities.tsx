@@ -20,7 +20,7 @@ export default function Opportunities({ opportunities }: any){
       <Layout language={lang}>
       <div className="h-full flex w-full justify-center">
           <div className="w-full md:w-9/12 lg:w-1/2 flex flex-col">
-           {opportunities.map((opportunity: any) => <Opportunity opportunity={opportunity}/>)}
+           {opportunities.map((opportunity: any) => <Opportunity key={opportunity.key} opportunity={opportunity}/>)}
           </div>
       </div>
   </Layout>
