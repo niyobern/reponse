@@ -17,7 +17,7 @@ export default function AppBar({ language }: any){
       } else {
         window.localStorage.setItem("lang", language)
       }
-    })
+    }, [language])
 
     function changeLang(){
       if (lang == "gb"){
