@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/upload/hesgoal.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/upload/hesgoal.js", "public/scripts/streaming1.js", "public/scripts/streaming2.js"],
   "exclude": ["node_modules"]
 }
