@@ -1,5 +1,5 @@
 // pages/api/periodic-fetch.js
-export default async function handler(req, res) {
+export default async function handler(req: any, res: any) {
     const path = req.query.number
     const intervalId = setInterval(async () => {
       // Make your periodic HTTP request here
