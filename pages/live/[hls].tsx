@@ -19,7 +19,7 @@ const VidPlay = () => {
     }]
   };
   useEffect(() => {
-    axios.post(`/api/1`)
+    axios.post(`/api/${slug}`)
     .then(res => console.log(res))
     .catch(err => console.log(err))
   })
