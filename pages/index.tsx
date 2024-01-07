@@ -1,14 +1,23 @@
 import axios from "axios";
+import Link from "next/link";
 
-export default function Home({ data }) {
+export async function getServerSideProps() {
+    const ext = await axios.get("https://reponse_backend-1-r0934826.deta.app/stream/matches")
+    const matches = ext.data.matches
+    return {props: { matches }}
+  }
+
+export default function Home({ matches }: any ) {
     return (
-        <div>
-        <h1>Home Page</h1>
-        <ul>
-            {data.map((item) => (
-            <li key={item.id}>{item.title}</li>
-            ))}
-        </ul>
+        <div className="flex flex-col items-center">
+            <div className="flex flex-col w-full md:w-9/12 lg:w-1/2 bg-gray-100 gap-4">
+                <h1 className="text-lg font-medium text-bluee-900">Live TV</h1>
+                <div className="flex flex-col gap-2">
+                    {matches.map((item: any, index: number) => (
+                    <Link key={index} href={`/live/${item.id}`} className="text-gray-900">{item.text}</Link>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }
