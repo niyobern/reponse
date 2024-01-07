@@ -12,7 +12,7 @@ const VidPlay = () => {
     responsive: true,
     fluid: true,
     sources: [{
-      src: `https://reponse_backend-1-r0934826.deta.app/stream/list/${slug}.m3u8`,
+      src: `https://playlists.berniyo.me/${slug}.m3u8`,
       type :'application/x-mpegURL'
     }]
   };
