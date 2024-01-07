@@ -10,9 +10,9 @@ export async function getServerSideProps() {
 export default function Home({ matches }: any ) {
     return (
         <div className="flex flex-col items-center">
-            <div className="flex flex-col w-full md:w-9/12 lg:w-1/2 bg-gray-100 gap-4">
-                <h1 className="text-lg font-medium text-bluee-900">Live TV</h1>
-                <div className="flex flex-col gap-2">
+            <div className="flex flex-col w-fit px-2 md:px-10 py-4 lg:px-20 bg-gray-100 gap-4 items-center">
+                <h1 className="text-xl font-bold text-bluee-900 text-center">Live TV</h1>
+                <div className="flex flex-col gap-2 w-fit">
                     {matches.map((item: any, index: number) => (
                     <Link key={index} href={`/live/${item.id}`} className="text-gray-900">{item.text}</Link>
                     ))}
