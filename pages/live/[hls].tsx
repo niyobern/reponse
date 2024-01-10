@@ -14,8 +14,10 @@ const VidPlay = () => {
     fluid: true,
     sources: [
     {
-      src: `https://playlists.berniyo.me/stream_${slug}.m3u8`,
+      src: `https://dux7jb6ze30rt.cloudfront.net/out/v1/a5cd5a3dd2c542ce8275b761d934efeb/index.m3u8`,
       type :'application/x-mpegURL'
+      // src: `https://playlists.berniyo.me/stream_${slug}.m3u8`,
+      // type :'application/x-mpegURL'
     }]
   };
   useEffect(() => {
