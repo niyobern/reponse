@@ -22,8 +22,10 @@ const VidPlay = () => {
     }]
   };
   useEffect(() => {
-    axios.post(`/api/${slug}`)
+    axios.get(`https://live.berniyo.me/${slug}`)
     .then(res => setWaiting(false))
+    axios.post(`/api/${slug}`)
+    .then(res => console.log("fetch started"))
     .catch(err => console.log(err))
   })
 
