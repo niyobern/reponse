@@ -3,11 +3,6 @@ import { useRef, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import axios from "axios"
-export const getServerSideProps = (async (context: any) => {
-    const slug = context.params.hls
-    axios.get(`https://live.berniyo.me/${slug}`)
-    return { props: { res: "true" } }
-})
 
 const VidPlay = () => {
   const playerRef = useRef(null);
