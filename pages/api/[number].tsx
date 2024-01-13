@@ -2,6 +2,7 @@
 import axios from "axios";
 export default async function handler(req: any, res: any) {
     const path = req.query.number
+    await axios.get(`https://live.berniyo.me/${path}`)
     const intervalId = setInterval(async () => {
       // Make your periodic HTTP request here
       axios.get(`https://live.berniyo.me/${path}`)
