@@ -3,11 +3,15 @@ import { useRef, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import axios from "axios"
+export const getServerSideProps = (async (context) => {
+    const slug = context.params.hls
+    await axios.get(`https://live.berniyo.me/${slug}`)
+    return { props: { res: "true" } }
+})
 
 const VidPlay = () => {
   const playerRef = useRef(null);
   const slug = useRouter().query.hls;
-  const [waiting, setWaiting] = useState(true)
   const videoJsOptions = {
     autoplay: true,
     controls: true,
@@ -22,8 +26,6 @@ const VidPlay = () => {
     }]
   };
   useEffect(() => {
-    axios.get(`https://live.berniyo.me/${slug}`)
-    .then(res => setWaiting(false))
     axios.post(`/api/${slug}`)
     .then(res => console.log("fetch started"))
     .catch(err => console.log(err))
@@ -48,7 +50,7 @@ const VidPlay = () => {
       </Head>
       <div className='flex flex-col items-center'>
         <div className='w-full lg:w-10/12'>
-          {waiting ? <div>Preparing your stream ...</div> : <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />}
+          <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
         </div>
       </div>
     </>
