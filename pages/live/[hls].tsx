@@ -1,5 +1,5 @@
 import VideoJS from '../../components/VideoJS'
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import axios from "axios"
@@ -7,6 +7,7 @@ import axios from "axios"
 const VidPlay = () => {
   const playerRef = useRef(null);
   const slug = useRouter().query.hls;
+  const [waiting, setWaiting] = useState(true)
   const videoJsOptions = {
     autoplay: true,
     controls: true,
@@ -22,7 +23,7 @@ const VidPlay = () => {
   };
   useEffect(() => {
     axios.post(`/api/${slug}`)
-    .then(res => console.log(res))
+    .then(res => setWaiting(false))
     .catch(err => console.log(err))
   })
 
@@ -45,7 +46,7 @@ const VidPlay = () => {
       </Head>
       <div className='flex flex-col items-center'>
         <div className='w-full lg:w-10/12'>
-            <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+          {waiting ? <div>Preparing your stream ...</div> : <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />}
         </div>
       </div>
     </>
