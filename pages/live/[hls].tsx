@@ -15,7 +15,7 @@ const VidPlay = () => {
     fluid: true,
     sources: [
     {
-      src: slug === `https://playlists.berniyo.me/stream_${slug}.m3u8`,
+      src: slug = `https://playlists.berniyo.me/stream_${slug}.m3u8`,
       type :'application/x-mpegURL'
       // src: `https://playlists.berniyo.me/stream_${slug}.m3u8`,
       // type :'application/x-mpegURL'
