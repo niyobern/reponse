@@ -54,7 +54,7 @@ const VidPlay = () => {
       </Head>
       <div className='flex flex-col items-center'>
         <div className='w-full lg:w-10/12'>
-          {waiting ? <div>For the first time, it takes some seconds to load ...</div> : <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />}
+          {waiting ? <div className="text-center text-xl font-medium py-20 px-4">For the first time, it takes some seconds to load ...</div> : <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />}
         </div>
       </div>
     </>
