@@ -50,7 +50,7 @@ const VidPlay = () => {
   return (
     <>
       <Head>
-       <title>visit www.jiprovisional.com</title>
+       <title>Live Football</title>
       </Head>
       <div className='flex flex-col items-center'>
         <div className='w-full lg:w-10/12'>
