@@ -15,14 +15,14 @@ const VidPlay = () => {
     fluid: true,
     sources: [
     {
-      src: `https://check-stream.berniyo.me/${slug}`,
+      src: `https://playlists.berniyo.me/stream_${slug}.m3u8`,
       type :'application/x-mpegURL'
       // src: `https://playlists.berniyo.me/stream_${slug}.m3u8`,
       // type :'application/x-mpegURL'
     }]
   };
   useEffect(() => {
-    axios.get(`https://playlists.berniyo.me/stream_${slug}.m3u8`)
+    axios.get(`https://check-stream.berniyo.me/${slug}`)
     .then(res => setWaiting(false))
     const intervalId = setInterval(() => {
       axios.get(`https://live.berniyo.me/${slug}`)
