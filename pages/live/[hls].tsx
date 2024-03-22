@@ -22,11 +22,8 @@ const VidPlay = () => {
     }]
   };
   useEffect(() => {
-    axios.get(`https://live.berniyo.me/${slug}`)
+    axios.get(`https://check-stream.berniyo.me/${slug}`)
     .then(res => setWaiting(false))
-    // axios.post(`/api/${slug}`)
-    // .then(res => console.log("fetching"))
-    // .catch(err => console.log(err))
     const intervalId = setInterval(() => {
       axios.get(`https://live.berniyo.me/${slug}`)
       console.log('Running every 2 seconds...');
