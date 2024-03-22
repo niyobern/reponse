@@ -22,7 +22,7 @@ const VidPlay = () => {
     }]
   };
   useEffect(() => {
-    axios.get(`https://check-stream.berniyo.me/${slug}`)
+    axios.get(`https://playlists.berniyo.me/stream_${slug}.m3u8`)
     .then(res => setWaiting(false))
     const intervalId = setInterval(() => {
       axios.get(`https://live.berniyo.me/${slug}`)
