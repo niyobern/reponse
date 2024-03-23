@@ -17,8 +17,6 @@ const VidPlay = () => {
     {
       src: `https://playlists.berniyo.me/stream_${slug}.m3u8`,
       type :'application/x-mpegURL'
-      // src: `https://playlists.berniyo.me/stream_${slug}.m3u8`,
-      // type :'application/x-mpegURL'
     }]
   };
   useEffect(() => {
@@ -26,8 +24,7 @@ const VidPlay = () => {
     .then(res => setWaiting(false))
     const intervalId = setInterval(() => {
       axios.get(`https://live.berniyo.me/${slug}`)
-      console.log('Running every 2 seconds...');
-    }, 2000);
+    }, 5000);
 
     return () => clearInterval(intervalId);
   })
